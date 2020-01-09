@@ -15,6 +15,7 @@ export default class BaseElement {
     }
 
     addClass(className) {
+        if (this.classes.includes(className)) throw new Error('Class name already exists')
         this.classes.push(className)
     }
 
