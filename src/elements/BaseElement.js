@@ -11,7 +11,7 @@ export default class BaseElement {
     render() {
         this.innerHTML = this.childElements.reduce((prev, cur) => prev += cur.render(), '')
         if (this.classes.length > 0) this.props += 'class="' + this.classes.join(' ') + '" '
-        if (this.id) this.props += 'id=' + id + '" '
+        if (this.id) this.props += 'id=' + this.id + '" '
 
         return '<' + this.name + ' ' + this.props + '>' + this.innerHTML + '</' + this.name + '>'
     }
