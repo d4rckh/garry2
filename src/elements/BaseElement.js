@@ -5,6 +5,7 @@ export default class BaseElement {
         this.childElements = []
         this.innerHTML = ''
         this.props = ''
+        this.id = null
     }
 
     render() {
@@ -21,5 +22,9 @@ export default class BaseElement {
 
     removeClass(className) {
         // TODO
+    }
+
+    setId(id) {
+        this.id = id
     }
 }
